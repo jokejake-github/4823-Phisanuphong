@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>63070504823</title>
+</head>
+
+
+<style>
+
+.header{
+    background-color: tomato;
+    color: azure;
+    height: 120 px;
+}
+
+.main p {
+    text-align: left;
+}
+
+.main{
+    background-color: rgb(147, 247, 155);
+    height: 300px;
+    font-size: 20px;
+}
+
+.footer{
+    background-color:darkorchid;
+    height: 140px;
+}
+
+.aside1{
+    background-color: deepskyblue;
+}
+
+.aside2{
+    background-color: rgb(201, 214, 124);
+}
+
+
+.container * {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    flex: 1 100%;
+    text-align: center;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media all and (min-width: 800px) {  
+
+     .main {
+         flex: 3;
+         order: 2;
+     }
+ 
+     .aside1 {
+         order: 1;
+     }
+ 
+     .aside2 {
+         order: 3;
+     }
+     
+    
+  
+     .footer {
+         order: 4;
+     }
+     
+}   
+ 
+
+ 
+ @media all and (min-width: 600px){
+     .aside {
+         flex:1;
+     }
+ }
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+</style>
+
+
+
+
+
+<body>
+   
+<div class="container">
+    <div class="header">
+        <h1>TOYOTA PRODUCTION SYSTEM</h1>
+    </div>
+
+<div class="main">
+    <h1 style="background-color: darkgreen; color: white;">TPS 4 STEBs</h1>
+    STEB 1. Work Site Control <br>
+    STEB 2. Continuous Flow <br>
+    STEB 3. Standardized Work<br>
+    STEB 4. Pull system<br>
+</div>
+
+<div class="aside1 aside">
+    <h1>Aside1</h1>
+
+</div>
+
+<div class="aside2 aside">
+   <h1>Aside2</h1>
+</div>
+
+<div class="footer">
+ <h1>Footer</h1>
+ <u style="color: white;">นาย พิศณุพงศ์ กัลป์พิทักษา 63070504823 <br></u>
+ <p style="color: white;">TOYOTA Production system(TPS)SMEs</p>
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+</body>
+
+</html>

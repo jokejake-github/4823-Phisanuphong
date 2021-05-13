@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>speed and feed rate</title>
+    <style>
+       
+         
+        .head {
+            border:5px solid greenyellow;
+            color: white;
+            background-color: teal;
+            width: auto;
+            height: auto;
+            text-align: center;
+        }
+        
+        .cal1 {
+    
+            width: 300px;
+            height: 350px;
+            border: 5px solid crimson;
+            background-color: bisque;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px;
+            align-items: center;
+           }
+          
+           .cal2 {
+            width: 300px;
+            height: 420px;
+            border: 5px solid rgb(11, 27, 238);
+            background-color: rgb(121, 224, 255);
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px;
+           }
+        
+        .cal1 h1 {
+               text-align: center;
+               background-color: crimson;
+               color: white;
+           }
+        
+        .cal2 h1{
+               text-align: center;
+               background-color: rgb(11, 27, 238);
+               color: white;
+            }
+        
+        
+        .cal1 input {
+               width: 150px;
+               background-color: burlywood ;
+               border: 2px solid black;
+               padding:8px;
+               margin: 10px;
+           }
+        
+        .cal2 input {
+            
+               width: 150px;
+               background-color:burlywood ;
+               border: 2px solid black;
+               padding: 8px;
+               margin: 10px;
+        }
+
+        .cal1 button{
+         background-color: hotpink;
+            width: 80px;
+            height:50px ;
+            font-size: x-large;
+            border-radius: 5px;
+            margin: 5px;
+         }  
+            
+         .cal2 button{
+            background-color: hotpink;
+            width: 80px;
+            height:50px ;
+            font-size: x-large;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        
+        
+       .container {
+            justify-content: center;
+            display:flex;
+            
+        }
+      
+      .F{
+          background-color: greenyellow;
+          
+      }
+
+      .s1{
+          background-color: greenyellow;
+      }
+
+     body{
+         background-color: pink;
+     }
+    </style>
+
+    <!-- java speed rate -->
+    <script>
+        function speedrate() {
+            let D = parseFloat(document.getElementById("diameter").value);
+            let n = parseFloat(document.getElementById("ความเร็วรอบ").value);
+            let Vc = (3.14159265 * D * n) / 1000;
+            document.getElementById("speedrate").value = Vc.toFixed(2);
+        }
+    </script>
+
+    <!-- java feed rate  -->
+    <script>
+        function feedrate() {
+            let fz = parseFloat(document.getElementById("feedpertooth").value);
+            let z = parseFloat(document.getElementById("numberoftooth").value);
+            let n2 = parseFloat(document.getElementById("ความเร็วรอบ1").value);
+            let Vf = (fz * z *n2);
+            document.getElementById("feedrate").value = Vf.toFixed(2);
+        }
+    </script>
+
+</head>
+
+
+<body>
+   
+    <h1 class="head">SPEED AND FEED RATE</h1>
+    
+    <div class="container">
+
+        <!-- เครื่องคิด cutting speed -->
+    <div class="cal1">
+        <h1>Speed Rate</h1>
+        <label for="" style="margin-left: 15px;">Spindle Speed (n)</label><br>
+        <input type="text" name="" id="ความเร็วรอบ" size="15px"> (rev/min)
+        <br>
+        <label for="" style="margin-left: 15px;">Cutter Diameter (D)</label><br>
+        <input type="text" name="" id="diameter" size="15px"> (mm)
+        <br>
+        <label for="" style="margin-left: 15px;" class="s1">Speed Rate (Vc)</label><br>
+        <input type="text" name="" id="speedrate" size="15px"> (m/min)
+        <br>
+        <button  onclick="speedrate()">Enter</button>
+    </div>
+    
+       
+    <!-- เครื่องคิด feed -->
+    <div class="cal2">
+        <h1>Feed Rate</h1>
+        <label for="" style="margin-left: 15px;">Feed Per Tooth (fz)</label><br>
+        <input type="text" name="" id="feedpertooth" size="15px"> (mm/tooth)
+        <br>
+        <label for="" style="margin-left: 15px;">Number Of Teeth (z)</label><br>
+        <input type="text" name="" id="numberoftooth" size="15px">
+        <br>
+        <label for="" style="margin-left: 15px">Spindle Speed (n)</label><br>
+        <input type="text" name="" id="ความเร็วรอบ1" size="15px"> (rev/min)
+        <br>
+        <label for="" style="margin-left: 15px;" class="F">Feed Rate (Vf)</label><br>
+        <input type="text" name="" id="feedrate" size="15px"> (mm/min)
+        <br>
+        <button onclick="feedrate()">Enter</button>
+    </div>
+    </div>
+
+    
+
+</body>
+</html>
